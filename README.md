@@ -1,3 +1,5 @@
+This is a practice project for me to create a React app from scratch using all the skills I have learnt so far. 
+
 What does this app do?
 - Takes a user input for username and age
 - List out the input
