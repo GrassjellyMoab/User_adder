@@ -1,0 +1,73 @@
+.CoverInput {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+
+
+.errorWindow {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 60%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.errorWindow .title {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: rgb(94, 11, 94);
+    color: #fff;
+}
+
+.errorWindow .miniContainer {
+    padding: 1rem;
+} 
+
+.errorWindow .miniContainer .content {
+    font-size: 0.7rem;
+    color: red; 
+    margin-bottom: 1.5rem;
+}
+
+
+.errorWindow .miniContainer .button {
+    width: auto;
+    float: right;
+    border: none;
+    font-size: 0.7rem;
+    background-color: rgb(72, 23, 117);
+    border-radius: 3px;
+    padding: 0.3rem;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.errorWindow .miniContainer .button:hover,
+.errorWindow .miniContainer .button:active {
+    background-color: rgb(47, 9, 83);
+    box-shadow: 0 0 5px #6a4377;
+    cursor: pointer;
+}
+
+.errorWindow .miniContainer .button:focus {
+    outline: none;
+}
+
+@media(max-width:768px) {
+    .errorWindow .miniContainer .button {
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
+    .errorWindow .miniContainer .content {
+        text-align: center;
+        font-size: 90%;
+    }
+}
