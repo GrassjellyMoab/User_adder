@@ -15,8 +15,8 @@ const App = () => {
   */
   const [usernames, setUserNames] = useState([]);
 
-   // state to check validity
-   const [isValid, setIsValid] = useState(true);
+  // state to check validity
+  const [isValid, setIsValid] = useState(true);
 
   // add User Handler to update state, adding new user object
   const addUserHandler = NewUser => {
