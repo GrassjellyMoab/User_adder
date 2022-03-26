@@ -32,11 +32,11 @@ const AddUserForm = props => {
             <div className={styles['new-expense__controls']}>
                 <div className={styles['new-expense__control']}>
                     <label>Username</label>
-                    <input value={inputedName} onChange={nameChangeHandler}></input>
+                    <input type='text' value={inputedName} onChange={nameChangeHandler}></input>
                 </div>
                 <div className={styles['new-expense__control']}>
                     <label>Age (Years)</label>
-                    <input value={inputedAge} onChange={ageChangehandler}></input>
+                    <input type='number' value={inputedAge} onChange={ageChangehandler}></input>
                 </div>
                 <button type='submit' className={styles['button']}>Add User</button>
             </div>
