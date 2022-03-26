@@ -26,6 +26,11 @@ const AddUserForm = props => {
         }
         // lift data up to parent component
         props.saveData(data);
+
+        if (data.name.trim().length > 0 && data.age.trim().length > 0 && +data.age > 0) {
+            setInputedName('');
+            setInputedAge('');
+        }
     }
     return (
         <form onSubmit={submitHandler}>
