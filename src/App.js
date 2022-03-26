@@ -21,7 +21,7 @@ const App = () => {
   // add User Handler to update state, adding new user object
   const addUserHandler = NewUser => {
     // check whether empty and whether age is a number
-    if (NewUser.name.trim().length > 0 && NewUser.age.trim().length > 0 && +NewUser.age < 1) {
+    if (NewUser.name.trim().length > 0 && NewUser.age.trim().length > 0 && !+NewUser.age < 1) {
       setIsValid(true);
     } 
     else {
