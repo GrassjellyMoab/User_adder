@@ -9,7 +9,7 @@ const Error = props => {
             <div className={styles['errorWindow']}>
                 <div className={styles['title']}>InvalidInput</div>
                 <div className={styles['miniContainer']}>
-                    <div className={styles['content']}>Please enter a valid name and age (non-empty values)</div>
+                    <div className={styles['content']}>{props.content}</div>
                     <button type="button" className={styles['button']} onClick={props.exit}>Okay</button>
                 </div>
             </div>

@@ -18,6 +18,9 @@ const App = () => {
   // state to check validity
   const [isValid, setIsValid] = useState(true);
 
+  // set content for Error message 
+  const [errorContent, setErrorContent] = useState('');
+
   // add User Handler to update state, adding new user object
   const addUserHandler = NewUser => {
     // check whether empty and whether age is a number
@@ -26,6 +29,13 @@ const App = () => {
     } 
     else {
         setIsValid(false);
+        // if empty string
+        if (NewUser.name.trim().length === 0|| NewUser.age.trim().length === 0) {
+          setErrorContent('Please enter a valid name and age (non-empty values)');
+        }
+        else {
+          setErrorContent('Please enter a valid number(> 0)');
+        }
         return;
     }
 
@@ -41,7 +51,7 @@ const App = () => {
 
   return (
     <div>
-      {!isValid && <Error exit={exitError}></Error>}
+      {!isValid && <Error exit={exitError} content={errorContent}></Error>}
       <div className={!isValid && styles['opacitydown']}>
         <AddUser addUser={addUserHandler}></AddUser>
         <UserList items={usernames}></UserList>
